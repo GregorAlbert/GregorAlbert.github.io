@@ -1,8 +1,21 @@
-<ul class="nav navbar-nav">
-  <li>
-    <a routerLink="about">About</a>
-  </li>
-  <li>
-    <a routerLink="services">Services</a>
-  </li>
-</ul>
+<mat-toolbar color="accent" class="mat-elevation-z10 toolbar-style">
+
+  <button mat-button color="primary" routerLink="home">Home</button>
+  <button mat-button color="primary" routerLink="article">Articles</button>
+  <button mat-button color="primary" routerLink="contact">Contact</button>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button appToggleFullscreen>
+    <mat-icon>fullscreen</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+
+
+
+

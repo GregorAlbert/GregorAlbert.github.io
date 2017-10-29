@@ -1,0 +1,10 @@
+.home {
+  background: whitesmoke url('../../assets/images/home-page.jpg') no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
