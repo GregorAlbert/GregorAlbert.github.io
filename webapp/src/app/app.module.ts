@@ -14,20 +14,24 @@ import {MatPaginatorModule} from '@angular/material';
 import {routes} from './app.router';
 
 import {AppComponent} from './app.component';
-import {NavigationComponent} from './navigation/navigation.component';
 import {HomeComponent} from './home/home.component';
 import {ArticlesComponent} from './articles/articles.component';
 import {ContactComponent} from './contact/contact.component';
-import {ToggleFullscreenDirective} from './navigation/full-screen.directive';
+import {ToggleFullscreenDirective} from './directives/full-screen.directive';
 import {EventComponent} from './home/event/event.component';
 import {TitleComponent} from './home/title/title.component';
 import {ArticleComponent} from './articles/article/article.component';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     HomeComponent,
     ArticlesComponent,
     ContactComponent,
@@ -47,7 +51,15 @@ import {ArticleComponent} from './articles/article/article.component';
     MatCardModule,
     MatListModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

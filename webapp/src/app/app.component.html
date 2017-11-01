@@ -1,7 +1,41 @@
 <section class="app">
 
-    <app-navigation></app-navigation>
-    <router-outlet></router-outlet>
+  <mat-toolbar color="accent" class="mat-elevation-z10 toolbar-style">
+    <div id="menu-buttons">
+      <button mat-button routerLink="home">{{"home" | translate}}</button>
+      <button mat-button routerLink="articles">{{"articles" | translate}}</button>
+      <button mat-button routerLink="contact">{{"contact" | translate}}</button>
+    </div>
+    <div id="menu-hamburger">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="home">{{"home" | translate}}</button>
+        <button mat-menu-item routerLink="articles">{{"articles" | translate}}</button>
+        <button mat-menu-item routerLink="contact">{{"contact" | translate}}</button>
+      </mat-menu>
+    </div>
+    <span class="spacer"></span>
+
+    <button mat-icon-button appToggleFullscreen>
+      <mat-icon>fullscreen</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="more">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #more="matMenu">
+      <button mat-menu-item>{{"theme" | translate}}</button>
+      <button mat-menu-item [matMenuTriggerFor]="subMenuLanguage">{{"language" | translate}}</button>
+    </mat-menu>
+    <mat-menu #subMenuLanguage="matMenu">
+      <button mat-menu-item (click)="switchLanguage('en')">English</button>
+      <button mat-menu-item (click)="switchLanguage('sk')">Slovenčina</button>
+    </mat-menu>
+
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
 
 </section>
 
