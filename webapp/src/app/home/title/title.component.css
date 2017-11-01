@@ -1,0 +1,12 @@
+.title-style {
+  opacity: 0.9;
+  position: absolute;
+  margin-left: 25%;
+  text-align: center;
+  bottom: 0;
+  background-color: yellow;
+}
+
+.delimiter {
+  margin: auto;
+}
