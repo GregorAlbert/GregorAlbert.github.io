@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -11,11 +11,23 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @include mat-core();
 
-$candy-app-primary: mat-palette($mat-brown);
-$candy-app-accent:  mat-palette($mat-yellow, A200, A100, A400);
-$candy-app-warn:    mat-palette($mat-blue-grey);
-$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+$light-app-primary: mat-palette($mat-brown);
+$light-app-accent: mat-palette($mat-yellow, A200, A100, A400);
+$light-app-warn: mat-palette($mat-blue-grey);
+$light-app-theme: mat-light-theme($light-app-primary, $light-app-accent, $light-app-warn);
 
-@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($light-app-theme);
+
+.dark-theme {
+  $dark-app-primary: mat-palette($mat-red);
+  $dark-app-accent: mat-palette($mat-light-blue, A200, A100, A400);
+  $dark-app-warn: mat-palette($mat-orange);
+  $dark-app-theme: mat-light-theme($dark-app-primary, $dark-app-accent, $dark-app-warn);
+
+  @include angular-material-theme($dark-app-theme);
+}
+
+
+
 
 

@@ -3,6 +3,10 @@
   "articles" : "Články",
   "contact" : "Kontakt",
 
-  "theme" : "Téma",
-  "language" :  "Jazyk"
+  "toggle_theme" : "Zmeniť farebnú tému",
+  "language" :  "Jazyk",
+
+  "fullscreen" : "Zobrazenie na celú plochu",
+  "fullscreen_exit" : "Zrušiť zobrazenie na celú plochu",
+  "options" : "Nastavenia"
 }

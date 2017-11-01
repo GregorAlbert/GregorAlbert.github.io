@@ -3,6 +3,10 @@
   "articles" : "Articles",
   "contact" : "Contact",
 
-  "theme" : "Theme",
-  "language": "Language"
+  "toggle_theme" : "Toggle theme",
+  "language": "Language",
+
+  "fullscreen" : "Fullscreen",
+  "fullscreen_exit" : "Disable fullscreen",
+  "options" : "Options"
 }

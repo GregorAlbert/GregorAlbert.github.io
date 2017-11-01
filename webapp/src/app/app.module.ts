@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material';
 import {MatListModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material';
 import {MatPaginatorModule} from '@angular/material';
+import {MatTooltipModule} from '@angular/material';
 
 import {routes} from './app.router';
 
@@ -17,7 +18,6 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {ArticlesComponent} from './articles/articles.component';
 import {ContactComponent} from './contact/contact.component';
-import {ToggleFullscreenDirective} from './directives/full-screen.directive';
 import {EventComponent} from './home/event/event.component';
 import {TitleComponent} from './home/title/title.component';
 import {ArticleComponent} from './articles/article/article.component';
@@ -35,7 +35,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     ArticlesComponent,
     ContactComponent,
-    ToggleFullscreenDirective,
     EventComponent,
     ArticleComponent,
     TitleComponent
@@ -52,6 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatListModule,
     MatToolbarModule,
     MatPaginatorModule,
+    MatTooltipModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
