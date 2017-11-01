@@ -1,10 +1,10 @@
 
-
 .work {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-top: 5%;
 }
 
 .card {
@@ -24,7 +24,6 @@
   margin-bottom: 0.5em;
 }
 
-
 @media only screen and (min-width: 37.50em) {
   .card {
     max-width: calc(50% - 60px);
@@ -36,3 +35,11 @@
     width: calc(33.33333% - 60px);
   }
 }
+
+.paginator-style {
+  position:fixed;
+  bottom:2em;
+  right:3em;
+  background-color: floralwhite;
+}
+

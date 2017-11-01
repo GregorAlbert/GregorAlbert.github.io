@@ -9,6 +9,26 @@
 
 .toolbar-style {
   z-index: 10;
+  position: fixed;
+  top:0;
+}
+
+@media screen and (max-width: 560px) {
+  #menu-buttons {
+    display:none;
+  }
+  #menu-hamburger {
+    display:block;
+  }
+}
+
+@media screen and (min-width: 561px) {
+  #menu-buttons {
+    display:block;
+  }
+  #menu-hamburger {
+    display:none;
+  }
 }
 
 
