@@ -1,0 +1,12 @@
+{
+  "home" : "Domov",
+  "articles" : "Články",
+  "contact" : "Kontakt",
+
+  "toggle_theme" : "Zmeniť farebnú tému",
+  "language" :  "Jazyk",
+
+  "fullscreen" : "Zobrazenie na celú plochu",
+  "fullscreen_exit" : "Zrušiť zobrazenie na celú plochu",
+  "options" : "Nastavenia"
+}
