@@ -11,6 +11,8 @@ import {MatListModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material';
 import {MatPaginatorModule} from '@angular/material';
 import {MatTooltipModule} from '@angular/material';
+import {MatSidenavModule} from '@angular/material';
+import {MatInputModule} from '@angular/material';
 
 import {routes} from './app.router';
 
@@ -41,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    // LazyLoadImageModule,
     BrowserAnimationsModule,
     routes,
     MatButtonModule,
@@ -52,6 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatToolbarModule,
     MatPaginatorModule,
     MatTooltipModule,
+    MatSidenavModule,
+    MatInputModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

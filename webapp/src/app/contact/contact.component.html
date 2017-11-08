@@ -1,3 +1,45 @@
-<p>
-  contact works!
-</p>
+<video autoplay loop id="video-background" muted>
+  <source src="../../assets/video/swim.mp4" type="video/mp4">
+</video>
+
+<div class="contact-style">
+
+  <mat-card class="card-style">
+    <mat-card-content>
+      <!--<form class="form-style">-->
+      <h1>Contact me</h1>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Full Name" maxlength="50">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <!--<mat-form-field class="full-width">-->
+        <!--<input matInput placeholder="Your e-mail" maxlength="50" [formControl]="emailFormControl">-->
+        <!--<mat-icon matSuffix>contact_mail</mat-icon>-->
+        <!--<mat-error *ngIf="emailFormControl.hasError('pattern')">-->
+          <!--Please enter a valid email address-->
+        <!--</mat-error>-->
+        <!--<mat-error *ngIf="emailFormControl.hasError('required')">-->
+          <!--Email is <strong>required</strong>-->
+        <!--</mat-error>-->
+      <!--</mat-form-field>-->
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Subject" maxlength="50">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <textarea matInput #message matTextareaAutosize placeholder="Message" class="message-style"></textarea>
+      </mat-form-field>
+
+      <!--<re-captcha site_key="<GOOGLE_RECAPTCHA_KEY>"></re-captcha>-->
+
+      <button mat-fab matTooltip="Odoslať správu" class="button-send-style">
+        <mat-icon>send</mat-icon>
+      </button>
+
+      <!--</form>-->
+    </mat-card-content>
+  </mat-card>
+
+
+</div>
+
+

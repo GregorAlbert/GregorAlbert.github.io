@@ -1,5 +1,4 @@
 
-
 .example-icon {
   padding: 0 14px;
 }
@@ -10,24 +9,30 @@
 
 .toolbar-style {
   z-index: 10;
-  position: fixed;
-  top:0;
+  /*position: fixed;*/
+  top: 0;
 }
 
 @media screen and (max-width: 560px) {
   #menu-buttons {
-    display:none;
+    display: none;
   }
+
   #menu-hamburger {
-    display:block;
+    display: block;
   }
 }
 
 @media screen and (min-width: 561px) {
   #menu-buttons {
-    display:block;
+    display: block;
   }
+
   #menu-hamburger {
-    display:none;
+    display: none;
   }
+}
+
+.sidenav {
+  padding: 20px;
 }
