@@ -1,0 +1,18 @@
+<div>
+  <agm-map [zoom]="3">
+
+
+    <agm-marker *ngFor="let article of articles" class="mapMarker"
+                [latitude]="article.lat" [longitude]="article.lon">
+
+      <agm-info-window [disableAutoPan]="true">
+        {{article.description}}
+        <button (click)=onSelect(article) mat-button>READ</button>
+
+      </agm-info-window>
+
+    </agm-marker>
+
+  </agm-map>
+</div>
+

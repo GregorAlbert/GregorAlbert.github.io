@@ -1,0 +1,49 @@
+p {
+  min-width: 300px;
+  max-width: 500px;
+  font-family: Roboto-Regular;
+}
+
+h2 {
+  font-family: Roboto-ThinItalic;
+}
+
+.image-container{
+  overflow:hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  width: auto;
+  height: 20vh;
+  display: block;
+}
+
+.blog {
+  width:50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+
+

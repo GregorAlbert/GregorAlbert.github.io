@@ -18,14 +18,18 @@ import {routes} from './app.router';
 
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
-import {ArticlesComponent} from './articles/articles.component';
+import {ArticleListComponent} from './articles/article-list/article-list.component';
 import {ContactComponent} from './contact/contact.component';
-import {EventComponent} from './home/event/event.component';
-import {TitleComponent} from './home/title/title.component';
-import {ArticleComponent} from './articles/article/article.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {AboutComponent} from './about/about.component';
+import {PlacesComponent} from './places/places.component';
+import {PlansComponent} from './plans/plans.component';
+import {SponsorsComponent} from './sponsors/sponsors.component';
+
+import {AgmCoreModule} from '@agm/core';
+import {ArticleDetailComponent} from './articles/article-detail/article-detail.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -35,11 +39,13 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
-    ArticlesComponent,
     ContactComponent,
-    EventComponent,
-    ArticleComponent,
-    TitleComponent
+    ArticleListComponent,
+    AboutComponent,
+    PlacesComponent,
+    PlansComponent,
+    SponsorsComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +70,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
+    }),
+    AgmCoreModule.forRoot({
+      //API KEY HERE
     })
   ],
   providers: [],

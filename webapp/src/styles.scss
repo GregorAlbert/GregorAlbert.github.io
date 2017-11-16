@@ -11,19 +11,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @include mat-core();
 
-$light-app-primary: mat-palette($mat-brown);
-$light-app-accent: mat-palette($mat-yellow, A200, A100, A400);
-$light-app-warn: mat-palette($mat-blue-grey);
-$light-app-theme: mat-light-theme($light-app-primary, $light-app-accent, $light-app-warn);
-
+$light-app-primary: mat-palette($mat-light-blue);
+$light-app-accent: mat-palette($mat-indigo);
+$light-app-theme: mat-light-theme($light-app-primary, $light-app-accent);
 @include angular-material-theme($light-app-theme);
 
 .dark-theme {
-  $dark-app-primary: mat-palette($mat-red);
-  $dark-app-accent: mat-palette($mat-light-blue, A200, A100, A400);
-  $dark-app-warn: mat-palette($mat-orange);
-  $dark-app-theme: mat-light-theme($dark-app-primary, $dark-app-accent, $dark-app-warn);
-
+  $dark-app-primary: mat-palette($mat-yellow);
+  $dark-app-accent: mat-palette($mat-amber);
+  $dark-app-theme: mat-dark-theme($dark-app-primary, $dark-app-accent);
   @include angular-material-theme($dark-app-theme);
 }
 

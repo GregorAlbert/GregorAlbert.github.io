@@ -1,6 +1,11 @@
 {
   "home" : "Home",
   "articles" : "Articles",
+  "about" : "About",
+  "places" : "Where we've been",
+  "plans" : "Our plans",
+  "gallery" : "Gallery",
+  "sponsors" : "Sponsors",
   "contact" : "Contact",
 
   "toggle_theme" : "Toggle theme",

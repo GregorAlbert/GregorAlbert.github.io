@@ -1,12 +1,15 @@
-
-  <section class="app">
+<div class="router-outlet-style"><section class="app">
   <div [class.dark-theme]="isDarkTheme">
 
-    <mat-toolbar color="accent" class="mat-elevation-z10 toolbar-style">
+    <mat-toolbar color="primary" class="mat-elevation-z10 toolbar-style">
       <div id="menu-buttons">
         <button mat-button routerLink="home">{{"home" | translate}}</button>
         <button mat-button routerLink="articles">{{"articles" | translate}}</button>
+        <button mat-button routerLink="places">{{"places" | translate}}</button>
+        <button mat-button routerLink="plans">{{"plans" | translate}}</button>
+        <button mat-button routerLink="about">{{"about" | translate}}</button>
         <button mat-button routerLink="contact">{{"contact" | translate}}</button>
+        <button mat-button routerLink="sponsors">{{"sponsors" | translate}}</button>
       </div>
 
       <div id="menu-hamburger">
@@ -40,8 +43,8 @@
         <mat-menu #subMenuLanguage="matMenu">
           <button mat-menu-item (click)="switchLanguage('en')">English</button>
           <button mat-menu-item (click)="switchLanguage('sk')">Slovenčina</button>
-    </mat-menu>
-    </mat-menu>
+        </mat-menu>
+      </mat-menu>
     </mat-toolbar>
 
     <mat-sidenav-container>
@@ -51,10 +54,13 @@
         <button mat-menu-item routerLink="contact" (click)="toggleSideNav()">{{"contact" | translate}}</button>
       </mat-sidenav>
 
-        <router-outlet></router-outlet>
+
+        <router-outlet class="router"></router-outlet>
+
+
 
     </mat-sidenav-container>
   </div>
 </section>
 
-
+</div>
