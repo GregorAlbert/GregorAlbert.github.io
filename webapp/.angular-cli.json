@@ -10,7 +10,7 @@
       "assets": [
         "assets",
         "i18n",
-        "favicon.ico"
+        "favicon.svg"
       ],
       "index": "index.html",
       "main": "main.ts",

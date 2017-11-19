@@ -1,17 +1,16 @@
 <mat-toolbar></mat-toolbar>
 
 <div class="blog">
-<h2>{{article.description}}</h2>
-<br>
-<div *ngFor="let paragraph of article.content">
-  <p>
-    {{paragraph}}
-  </p>
-  <div class="image-container">
-  <img mat-card-image src={{article.gallery[0]}} class="blog-image">
+  <h2>{{article.description}}</h2>
+  <div *ngFor="let paragraph of article.content; let idx = index" lazy-load-images >
+    <p>
+      {{paragraph}}
+    </p>
+    <div class="image-container" >
+      <img mat-card-image src="{{article.gallery[idx]}}" class="blog-image">
+    </div>
+    <br>
   </div>
-  <br>
-</div>
-<button mat-button>GALLERY</button>
+  <button mat-raised-button (click)=routeGallery(article) class="gallery-button" color="primary">{{"button.gallery" | translate}}</button>
 </div>
 

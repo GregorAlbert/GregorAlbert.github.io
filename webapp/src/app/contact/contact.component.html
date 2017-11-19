@@ -1,36 +1,41 @@
-<video autoplay loop id="video-background" muted>
-  <source src="../../assets/video/swim/swim.mp4" type="video/mp4">
-</video>
-
 <div class="contact-style">
 
-  <mat-card class="card-style">
-    <mat-card-content>
-      <!--<form class="form-style">-->
-      <h1>Contact me</h1>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Full Name" maxlength="50">
-        <mat-icon matSuffix>person</mat-icon>
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Your e-mail" maxlength="50">
-        <mat-icon matSuffix>contact_mail</mat-icon>
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <textarea matInput #message matTextareaAutosize placeholder="Message" class="message-style"></textarea>
-      </mat-form-field>
+  <mat-toolbar></mat-toolbar>
+  <video autoplay loop id="video-background" muted>
+    <source src="../../assets/video/swim/swim.mp4" type="video/mp4">
+  </video>
 
-      <!--<re-captcha site_key="<GOOGLE_RECAPTCHA_KEY>"></re-captcha>-->
+  <div class="contact-style">
 
-      <button mat-fab matTooltip="Odoslať správu" class="button-send-style" color="primary">
-        <mat-icon>send</mat-icon>
-      </button>
+    <mat-card class="card-style">
+      <mat-card-content>
+        <h1>
+          {{"contactScreen.title" | translate}}
+        </h1>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="{{'contactScreen.fullName' | translate}}" maxlength="50">
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="{{'contactScreen.email' | translate}}" maxlength="50">
+          <mat-icon matSuffix>contact_mail</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <textarea matInput #message matTextareaAutosize placeholder="{{'contactScreen.message' | translate}}" class="message-style"></textarea>
+        </mat-form-field>
 
-      <!--</form>-->
-    </mat-card-content>
-  </mat-card>
+        <!--<re-captcha site_key="<GOOGLE_RECAPTCHA_KEY>"></re-captcha>-->
+
+        <button mat-fab matTooltip="{{'contactScreen.sendMessage' | translate}}" class="button-send-style" color="primary">
+          <mat-icon>send</mat-icon>
+        </button>
+
+      </mat-card-content>
+    </mat-card>
 
 
+  </div>
 </div>
+
 
 

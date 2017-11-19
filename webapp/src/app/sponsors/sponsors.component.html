@@ -1,27 +1,29 @@
-<mat-toolbar></mat-toolbar>
 <div class="sponsors-style">
+  <mat-toolbar></mat-toolbar>
 
-  <div>
-    <div class="container">
-      <h2>Companies</h2>
-      <ul>
-        <li>unsplash</li>
-        <li>coverr</li>
-        <li>google</li>
-        <li class="clear"></li>
-      </ul>
-    </div>
-    <div class="container">
-      <h2>Supporters</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=0q9FOeEELPY&t=1205s" target="_blank">Kara Erickson</a></li>
-        <li><a href="https://www.youtube.com/watch?v=0q9FOeEELPY&t=1205s" target="_blank">Kara Erickson</a></li>
-        <li><a href="https://www.youtube.com/watch?v=0q9FOeEELPY&t=1205s" target="_blank">Kara Erickson</a></li>
-        <li class="clear"></li>
-      </ul>
-    </div>
-  </div>
-
+  <mat-list>
+    <h3 mat-subheader>{{"companies" | translate}}</h3>
+    <mat-list-item *ngFor="let company of companies">
+      <mat-icon mat-list-icon color="primary" target="_blank">
+        <a [attr.href]=company.link target="_blank">
+          web
+        </a>
+      </mat-icon>
+      <h4 mat-line>{{company.name}}</h4>
+      <p mat-line> {{company.description}} </p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader>{{"supporters" | translate}}</h3>
+    <mat-list-item *ngFor="let supporter of supporters">
+      <mat-icon mat-list-icon>
+        <a [attr.href]=supporter.link target="_blank">
+          person
+        </a>
+      </mat-icon>
+      <h4 mat-line>{{supporter.name}}</h4>
+      <p mat-line> {{supporter.description}} </p>
+    </mat-list-item>
+  </mat-list>
 </div>
 
 

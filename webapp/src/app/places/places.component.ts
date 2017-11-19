@@ -19,9 +19,14 @@ export class PlacesComponent implements OnInit {
     this.articles = this._articleService.getArticles();
   }
 
-  onSelect(art) {
+  routeArticle(art) {
     this.selectedArticle = art;
     this._router.navigate(['/article', art.id]);
+  }
+
+  routeGallery(art) {
+    this.selectedArticle = art;
+    this._router.navigate(['/gallery', art.id]);
   }
 
 }

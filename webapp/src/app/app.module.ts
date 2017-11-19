@@ -13,6 +13,8 @@ import {MatPaginatorModule} from '@angular/material';
 import {MatTooltipModule} from '@angular/material';
 import {MatSidenavModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
+import {MatExpansionModule} from '@angular/material';
+import {MatGridListModule} from '@angular/material';
 
 import {routes} from './app.router';
 
@@ -30,6 +32,10 @@ import {SponsorsComponent} from './sponsors/sponsors.component';
 
 import {AgmCoreModule} from '@agm/core';
 import {ArticleDetailComponent} from './articles/article-detail/article-detail.component';
+import {ArticleGalleryComponent} from './articles/article-gallery/article-gallery.component';
+import {LazyLoadImagesModule} from 'ngx-lazy-load-images';
+import {PlaceDetailComponent} from './places/place-detail/place-detail.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -45,12 +51,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     PlacesComponent,
     PlansComponent,
     SponsorsComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    ArticleGalleryComponent,
+    PlaceDetailComponent
   ],
   imports: [
     BrowserModule,
-    // LazyLoadImageModule,
+    LazyLoadImagesModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     routes,
     MatButtonModule,
     MatCheckboxModule,
@@ -63,7 +72,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatTooltipModule,
     MatSidenavModule,
     MatInputModule,
-    HttpClientModule,
+    MatExpansionModule,
+    MatGridListModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -72,7 +82,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     AgmCoreModule.forRoot({
-      //API KEY HERE
+      apiKey: ''
     })
   ],
   providers: [],

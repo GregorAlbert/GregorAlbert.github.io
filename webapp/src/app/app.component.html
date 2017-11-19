@@ -1,66 +1,80 @@
-<div class="router-outlet-style"><section class="app">
-  <div [class.dark-theme]="isDarkTheme">
+<div class="router-outlet-style">
+  <section class="app">
+    <div [class.dark-theme]="isDarkTheme">
 
-    <mat-toolbar color="primary" class="mat-elevation-z10 toolbar-style">
-      <div id="menu-buttons">
-        <button mat-button routerLink="home">{{"home" | translate}}</button>
-        <button mat-button routerLink="articles">{{"articles" | translate}}</button>
-        <button mat-button routerLink="places">{{"places" | translate}}</button>
-        <button mat-button routerLink="plans">{{"plans" | translate}}</button>
-        <button mat-button routerLink="about">{{"about" | translate}}</button>
-        <button mat-button routerLink="contact">{{"contact" | translate}}</button>
-        <button mat-button routerLink="sponsors">{{"sponsors" | translate}}</button>
-      </div>
+      <mat-toolbar color="primary" class="mat-elevation-z10 toolbar-style">
+        <div id="menu-buttons">
+          <button mat-button routerLink="home">{{"home" | translate}}</button>
+          <button mat-button routerLink="articles">{{"articles" | translate}}</button>
+          <button mat-button routerLink="places">{{"places" | translate}}</button>
+          <button mat-button routerLink="plans">{{"plans" | translate}}</button>
+          <button mat-button routerLink="about">{{"about" | translate}}</button>
+          <button mat-button routerLink="contact">{{"contact" | translate}}</button>
+          <button mat-button routerLink="sponsors">{{"sponsors" | translate}}</button>
+        </div>
 
-      <div id="menu-hamburger">
-        <button mat-icon-button type="button" mat-button (click)="toggleSideNav()">
-          <mat-icon *ngIf="!isSideNavOpened">menu</mat-icon>
-          <mat-icon *ngIf="isSideNavOpened">clear</mat-icon>
+        <div id="menu-hamburger">
+          <button mat-icon-button type="button" mat-button (click)="toggleSideNav()">
+            <mat-icon *ngIf="!isSideNavOpened">menu</mat-icon>
+            <mat-icon *ngIf="isSideNavOpened">clear</mat-icon>
+          </button>
+        </div>
+        <span class="spacer"></span>
+        <img src="../assets/logo/logo.svg" class="logo-image">
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="toggleFullScreen()">
+          <mat-icon *ngIf="isFullScreen" matTooltip="{{'fullscreen_exit' | translate}}"
+                    [matTooltipShowDelay]="showDelay">
+            fullscreen_exit
+          </mat-icon>
+          <mat-icon *ngIf="!isFullScreen" matTooltip="{{'fullscreen' | translate}}" [matTooltipShowDelay]="showDelay">
+            fullscreen
+          </mat-icon>
         </button>
-      </div>
-      <span class="spacer"></span>
-      <button mat-icon-button (click)="toggleFullScreen()">
-        <mat-icon *ngIf="isFullScreen" matTooltip="{{'fullscreen_exit' | translate}}" [matTooltipShowDelay]="showDelay">
-          fullscreen_exit
-        </mat-icon>
-        <mat-icon *ngIf="!isFullScreen" matTooltip="{{'fullscreen' | translate}}" [matTooltipShowDelay]="showDelay">
-          fullscreen
-        </mat-icon>
-      </button>
-      <button mat-icon-button [matMenuTriggerFor]="more" matTooltip="{{'options' | translate}}"
-              [matTooltipShowDelay]="showDelay">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #more="matMenu">
-        <button mat-menu-item (click)="toggleTheme()">
-          <mat-icon>format_color_fill</mat-icon>
-          {{"toggle_theme" | translate}}
+        <button mat-icon-button [matMenuTriggerFor]="more" matTooltip="{{'options' | translate}}"
+                [matTooltipShowDelay]="showDelay">
+          <mat-icon>more_vert</mat-icon>
         </button>
-        <button mat-menu-item [matMenuTriggerFor]="subMenuLanguage">
-          <mat-icon>language</mat-icon>
-          {{"language" | translate}}
-        </button>
-        <mat-menu #subMenuLanguage="matMenu">
-          <button mat-menu-item (click)="switchLanguage('en')">English</button>
-          <button mat-menu-item (click)="switchLanguage('sk')">Slovenčina</button>
+        <mat-menu #more="matMenu">
+          <button mat-menu-item (click)="toggleTheme()">
+            <mat-icon>format_color_fill</mat-icon>
+            {{"toggle_theme" | translate}}
+          </button>
+          <button mat-menu-item [matMenuTriggerFor]="subMenuLanguage">
+            <mat-icon>language</mat-icon>
+            {{"language" | translate}}
+          </button>
+          <mat-menu #subMenuLanguage="matMenu">
+            <button mat-menu-item (click)="switchLanguage('en')">English</button>
+            <button mat-menu-item (click)="switchLanguage('sk')">Slovenčina</button>
+          </mat-menu>
         </mat-menu>
-      </mat-menu>
-    </mat-toolbar>
+      </mat-toolbar>
 
-    <mat-sidenav-container>
-      <mat-sidenav #sidenav class="sidenav">
-        <button mat-menu-item routerLink="home" (click)="toggleSideNav()">{{"home" | translate}}</button>
-        <button mat-menu-item routerLink="articles" (click)="toggleSideNav()">{{"articles" | translate}}</button>
-        <button mat-menu-item routerLink="contact" (click)="toggleSideNav()">{{"contact" | translate}}</button>
-      </mat-sidenav>
+      <mat-sidenav-container>
 
+        <mat-sidenav #sidenav class="sidenav">
+          <hr>
+          <button mat-menu-item routerLink="home" (click)="toggleSideNav()">{{"home" | translate}}</button>
+          <hr>
+          <button mat-menu-item routerLink="articles" (click)="toggleSideNav()">{{"articles" | translate}}</button>
+          <hr>
+          <button mat-menu-item routerLink="places" (click)="toggleSideNav()">{{"places" | translate}}</button>
+          <hr>
+          <button mat-menu-item routerLink="plans" (click)="toggleSideNav()">{{"plans" | translate}}</button>
+          <hr>
+          <button mat-menu-item routerLink="about" (click)="toggleSideNav()">{{"about" | translate}}</button>
+          <hr>
+          <button mat-menu-item routerLink="contact" (click)="toggleSideNav()">{{"contact" | translate}}</button>
+          <hr>
+          <button mat-menu-item routerLink="sponsors" (click)="toggleSideNav()">{{"sponsors" | translate}}</button>
+          <hr>
+        </mat-sidenav>
 
         <router-outlet class="router"></router-outlet>
 
-
-
-    </mat-sidenav-container>
-  </div>
-</section>
+      </mat-sidenav-container>
+    </div>
+  </section>
 
 </div>

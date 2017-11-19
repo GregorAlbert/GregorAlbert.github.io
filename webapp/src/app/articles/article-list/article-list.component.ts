@@ -10,7 +10,6 @@ import {ArticleService} from '../article.service';
 })
 export class ArticleListComponent implements OnInit {
 
-  selectedArticle;
   articles;
 
   constructor(private _router: Router, private _articleService: ArticleService) {}
@@ -19,9 +18,16 @@ export class ArticleListComponent implements OnInit {
     this.articles = this._articleService.getArticles();
   }
 
-  onSelect(art) {
-    this.selectedArticle = art;
+  routeArticle(art) {
     this._router.navigate(['/article', art.id]);
+  }
+
+  routeGallery(art) {
+    this._router.navigate(['/gallery', art.id]);
+  }
+
+  routePlaces(art) {
+    this._router.navigate(['/places', art.id]);
   }
 
 

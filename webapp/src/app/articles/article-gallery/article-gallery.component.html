@@ -1,0 +1,11 @@
+<div class="gallery">
+  <mat-toolbar></mat-toolbar>
+
+  <mat-grid-list [cols]="3" [rowHeight]="100">
+    <mat-grid-tile *ngFor="let image of article.gallery" [colspan]="1" [rowspan]="9" lazy-load-images>
+      <img src="{{image}}" class="image-style">
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
+

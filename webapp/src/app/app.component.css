@@ -13,7 +13,7 @@
   top: 0;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 824px) {
   #menu-buttons {
     display: none;
   }
@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: 561px) {
+@media screen and (min-width: 825px) {
   #menu-buttons {
     display: block;
   }
@@ -35,14 +35,14 @@
 
 .sidenav {
   padding: 20px;
+  margin-top: 50px;
 }
 
 .router-outlet-style {
   height: 100vh;
-  /*tmp*/
-  background-color: crimson;
 }
 
-.router{
-
+.logo-image{
+  height: 20px;
+  width: auto;
 }

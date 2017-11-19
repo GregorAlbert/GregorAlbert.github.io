@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ArticleService} from '../article.service';
-
 
 
 @Component({
@@ -14,13 +13,19 @@ export class ArticleDetailComponent implements OnInit {
   articleID: number;
   article;
 
-  constructor(private route: ActivatedRoute, private _articleService: ArticleService) {
+  constructor(private _router: Router, private route: ActivatedRoute, private _articleService: ArticleService) {
     this.route.params.subscribe(
       params => this.articleID = params['id']
     );
     this.article = _articleService.getArticleById(this.articleID);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  routeGallery(art) {
+    this._router.navigate(['/gallery', art.id]);
+  }
+
 
 }

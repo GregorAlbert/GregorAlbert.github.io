@@ -1,13 +1,17 @@
+.contact-style {
+  height: 100vh;
+}
 
 .full-width {
   width: 100%;
 }
 
 .card-style {
-  margin-top: 15%;
+  margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
+  max-width: 500px;
   min-width: 300px;
 }
 
@@ -22,13 +26,7 @@
   height: 150px;
 }
 
-.contact-style{
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
-
-.button-send-style{
+.button-send-style {
   left: 42%;
 }
 
