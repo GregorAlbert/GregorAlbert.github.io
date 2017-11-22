@@ -1,12 +1,12 @@
-<div class="home" [ngStyle]="{ 'background-image': 'url(' + lastArticle.gallery[0] + ')'}">
+<div class="home" lazy-load-images [ngStyle]="{ 'background-image': 'url(' + lastArticle.gallery[0] + ')'}">
 
   <div class="box-style">
     <div class="background-style"></div>
     <div class="content-style">
       <div class="title">
-        <h3>
+        <h2>
           {{lastArticle.description}}
-        </h3>
+        </h2>
       </div>
       <a mat-fab class="button-style" color="primary" routerLink="/article/{{lastArticle.id}}">
         <mat-icon>arrow_forward</mat-icon>

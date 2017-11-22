@@ -21,6 +21,10 @@
   #menu-hamburger {
     display: block;
   }
+
+  .another-spacer {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 825px) {
@@ -30,6 +34,10 @@
 
   #menu-hamburger {
     display: none;
+  }
+
+  .another-spacer {
+    display: block;
   }
 }
 

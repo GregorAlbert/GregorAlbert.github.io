@@ -19,11 +19,15 @@
     "gallery": "GALÉRIA"
   },
   "contactScreen": {
-    "title":"Napíšte mi",
-    "fullName":"Celé meno",
-    "email":"Váš e-mail",
-    "message":"Správa",
-    "sendMessage":"Odoslať správu"
+    "title": "Napíšte mi",
+    "fullName": "Celé meno",
+    "email": "Váš e-mail",
+    "message": "Správa",
+    "sendMessage": "Odoslať správu"
+  },
+  "aboutScreen": {
+    "background": "Odkiaľ sme",
+    "travelling": "Prečo milujeme cestovanie",
+    "team": "Tím"
   }
-
 }

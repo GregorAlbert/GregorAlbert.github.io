@@ -12,8 +12,10 @@ import {ArticleService} from '../article.service';
 export class ArticleGalleryComponent implements OnInit {
   articleID: number;
   article;
+  actualPicture: number;
 
   constructor(private route: ActivatedRoute, private _articleService: ArticleService) {
+    this.actualPicture = 0;
     this.route.params.subscribe(
       params => this.articleID = params['id']
     );
@@ -21,6 +23,22 @@ export class ArticleGalleryComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  next() {
+    if (this.actualPicture + 1 === this.article.gallery.length) {
+      this.actualPicture = 0;
+    } else {
+      this.actualPicture++;
+    }
+  }
+
+  previous() {
+    if (this.actualPicture === 0) {
+      this.actualPicture = this.article.gallery.length - 1;
+    } else {
+      this.actualPicture--;
+    }
   }
 
 }

@@ -1,11 +1,17 @@
 <div class="gallery">
   <mat-toolbar></mat-toolbar>
 
-  <mat-grid-list [cols]="3" [rowHeight]="100">
-    <mat-grid-tile *ngFor="let image of article.gallery" [colspan]="1" [rowspan]="9" lazy-load-images>
-      <img src="{{image}}" class="image-style">
-    </mat-grid-tile>
-  </mat-grid-list>
+  <button mat-mini-fab color="primary" class="previous button-style" (click)="next()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <button mat-mini-fab color="primary" class="next button-style" (click)="previous()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+
+  <div class="container" lazy-load-images>
+    <img src="{{article.gallery[actualPicture]}}"  >
+
+  </div>
 
 </div>
 

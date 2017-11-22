@@ -4,7 +4,6 @@ import * as screenfull from 'screenfull';
 import {MatSidenav} from '@angular/material';
 import {Router, NavigationEnd} from '@angular/router';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,7 +12,7 @@ import {Router, NavigationEnd} from '@angular/router';
 
 export class AppComponent implements OnInit {
   isFullScreen = false;
-  isDarkTheme = false;
+  isDarkTheme;
   isSideNavOpened = false;
   showDelay = 300;
   currentHour = new Date().getHours();
@@ -21,10 +20,9 @@ export class AppComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   constructor(private translate: TranslateService, private router: Router) {
+    this.isDarkTheme = this.currentHour < 8 || this.currentHour > 19;
 
-    this.isDarkTheme = this.currentHour < 8 && this.currentHour > 20 ;
     translate.setDefaultLang('en');
-
     const browserLang: string = translate.getBrowserLang();
     translate.use(browserLang.match(/en|sk/) ? browserLang : 'en');
   }
@@ -34,7 +32,7 @@ export class AppComponent implements OnInit {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     });
   }
 

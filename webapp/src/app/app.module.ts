@@ -35,6 +35,7 @@ import {ArticleDetailComponent} from './articles/article-detail/article-detail.c
 import {ArticleGalleryComponent} from './articles/article-gallery/article-gallery.component';
 import {LazyLoadImagesModule} from 'ngx-lazy-load-images';
 import {PlaceDetailComponent} from './places/place-detail/place-detail.component';
+import { TravelerComponent } from './about/traveler/traveler.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -53,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SponsorsComponent,
     ArticleDetailComponent,
     ArticleGalleryComponent,
-    PlaceDetailComponent
+    PlaceDetailComponent,
+    TravelerComponent
   ],
   imports: [
     BrowserModule,
