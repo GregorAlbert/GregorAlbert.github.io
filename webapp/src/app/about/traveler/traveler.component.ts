@@ -19,17 +19,17 @@ export class TravelerComponent implements OnInit {
       {
         name: 'Simon Kavagnah',
         position: 'Driver',
-        picture: '/assets/images/travelers/chris-benson-344429.jpg'
+        picture: '/assets/images/travelers/simon.png'
       },
       {
         name: 'Alice Pearson',
         position: 'Coordinator',
-        picture: '/assets/images/travelers/michael-dam-258165.jpg'
+        picture: '/assets/images/travelers/alice.png'
       },
       {
         name: 'Mike Henry',
         position: 'Photographer',
-        picture: '/assets/images/travelers/lucas-sankey-378674.jpg'
+        picture: '/assets/images/travelers/mike.png'
       }
     ];
   }
