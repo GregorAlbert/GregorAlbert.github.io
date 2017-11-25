@@ -24,5 +24,10 @@
     "email":"Your E-mail",
     "message":"Message",
     "sendMessage":"Send Message"
+  },
+  "aboutScreen": {
+    "background" :"Our background",
+    "travelling": "Why we love traveling",
+    "team": "Team"
   }
 }
